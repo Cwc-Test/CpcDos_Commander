@@ -1,0 +1,14 @@
+;Register Cwc before using a .cwmake
+>
+-{_sOpt}="Debug"
+>
+-{_wToolchain}= VLianceTool/LibRT
+>
+-{pLibDir}= Lib/Lib_{_sOpt}/
+-{pObj}= obj/{_sPlatform}_{_sOpt}/
+>
+-c CpcSdk/src/ -o {pObj}Lib_Dynamic/
+>
+-o  {pObj}Lib_Dynamic/ -#To {pLibDir}CpcDos.dll 
+-Wl,--out-implib,{pLibDir}libCpcDos-dll.a
+>
