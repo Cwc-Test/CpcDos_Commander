@@ -16,6 +16,7 @@
 -o  {pObj}Example/ -#To {pOut}CpcDos.exe
 	-L {pLib}
 	-l CpcDos-dll
+	-Wl,--export-all-symbols 
 >
 -#Copy {pLib}CpcDos.dll {pOut}CpcDos.dll
 >
